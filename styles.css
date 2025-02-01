@@ -1,0 +1,198 @@
+body {
+    background-color: #d1dbe4;
+    margin: 0;
+    font-family: monts;
+}
+
+/* @font-face {
+    font-family: "forAll";
+    src: local("forAll"), 
+    url(/fonts/MontserratAlternates-Black.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-BlackItalic.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-Bold.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-BoldItalic.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-ExtraBold.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-ExtraBoldItalic.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-ExtraLight.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-ExtraLightItalic.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-Italic.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-Light.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-LightItalic.ttf) format('tff'),
+    url(/fonts/MontserratAlternates-Medium.ttf) format('tff');
+} */
+.montserrat-alternates-thin {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-extralight {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-light {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-regular {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-medium {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-semibold {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-bold {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-extrabold {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-black {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-thin-italic {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .montserrat-alternates-extralight-italic {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .montserrat-alternates-light-italic {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .montserrat-alternates-regular-italic {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .montserrat-alternates-medium-italic {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .montserrat-alternates-semibold-italic {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .montserrat-alternates-bold-italic {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .montserrat-alternates-extrabold-italic {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .montserrat-alternates-black-italic {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+.upperHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 0;
+}
+
+h1 {
+    font-size: 3vw;
+    margin-left: 1vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #d1dbe4;
+}
+
+.favic {
+    width: 6vw;
+    height: 6vh;
+}
+
+.btn {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    color: #476f95;
+    display: block;
+    text-decoration: none;
+    background-color: #a3b7ca;
+    height: max-content;
+    width: max-content;
+    border: 0;
+}
+
+.leftHeader {
+    display: flex;
+    flex-direction: row;
+}
+
+table {
+    border-radius: 0 0 15px 15px;
+    padding-right: 0;
+    margin-right: 0;
+    height: 6vh;
+    border-collapse: collapse;
+}
+
+.tableCell {
+    border-left: 0.2vh solid #194a7a;
+    border-right: 0.2vh solid #194a7a;
+
+}
+
+.withTable {
+    border-left: 0.1vw solid #194a7a;
+    border-bottom: 0.1vw solid #194a7a;
+    border-radius: 5px 0 5px 5px;
+    background-color: #a3b7ca;
+}
+p {
+    color: #476f95;
+}
+header {
+    background-color: #7593af;
+    height: 15vh;
+}
+.pInHeader{
+    color: #d1dbe4;
+}

@@ -9,21 +9,40 @@
     <link rel="icon" href="/img/icons8-яркая-луна-48.png" type="icon/x-icon">
     <link rel="stylesheet" href="styles.css">
     <script>"script.js"</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img src="/img/icons8-яркая-луна-96.png" alt="Лого">
-        <h1>Sleepynap</h1>
-        <menu>
-            <a href="#calculator">Sleep calculator</a>
-            <a href="#whatIsSleep">What is Sleep?</a>
-            <a href="#sleepDisorders">About sleep disorders</a>
-            <a href="#impactOfSleep">The impact of sleep</a>
-            <a href="#sleepHygiene">Sleep hygiene</a>
-            <a href="/articles.html">More detailed articles</a>
-        </menu>
-        <p>Your Sleep, Your Health, Our Expertise: Explore our extensive collection of articles on sleep, covering
+        <div class="upperHeader">
+            <div class="leftHeader">
+                <img src="/img/icons8-яркая-луна-96.png" alt="Лого" class="favic">
+                <h1>Sleepynap</h1>
+            </div>
+            <div class="withTable">
+                <table>
+                    <tr>
+                        <th><button href="#calculator" class="btn" onclick="window.location.href='location'">Sleep
+                                calculator</button></th>
+                        <th class="tableCell"><button onclick="window.location.href='#whatIsSleep'" href=""
+                                class="btn">What is Sleep?</button></th>
+                        <th class="tableCell"><button onclick="window.location.href='#sleepDisorders'" class="btn">About
+                                sleep disorders</и>
+                        </th>
+                        <th class="tableCell"><button onclick="window.location.href='#impactOfSleep'" class="btn">The
+                                impact of sleep</button></th>
+                        <th class="tableCell"><button onclick="window.location.href='#sleepHygiene'" class="btn">Sleep
+                                hygiene</button></th>
+                        <th><button href="/articles.html" class="btn">More detailed articles</button></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p class="pInHeader">Your Sleep, Your Health, Our Expertise: Explore our extensive collection of articles on sleep, covering
             topics such as: the science of sleep, sleep disorders (insomnia, sleep apnea, etc.), the impact of sleep on
             your physical and mental health, and effective strategies for improving your sleep hygiene. We also offer a
             powerful sleep calculator</p>
@@ -33,11 +52,13 @@
 
         </div>
         <h2 id="whatIsSleep">What is Sleep?</h2>
-        <p class="articles">Sleep, a seemingly passive state, is a fundamental biological process crucial for physical and mental
+        <p class="articles">Sleep, a seemingly passive state, is a fundamental biological process crucial for physical
+            and mental
             well-being. Far from being a period of inactivity, sleep is a complex and dynamic period characterized by
             distinct stages, each playing a vital role in restoring and rejuvenating the body and mind.</p>
         <h2 id="sleepDisorders">About sleep disorders</h2>
-        <p class="articles">Sleep disorders encompass a wide range of conditions that disrupt the quantity, quality, or timing of sleep,
+        <p class="articles">Sleep disorders encompass a wide range of conditions that disrupt the quantity, quality, or
+            timing of sleep,
             significantly impacting daytime functioning. These disorders can manifest in various ways, from difficulty
             falling asleep (insomnia) or staying asleep (sleep apnea), to excessive daytime sleepiness (narcolepsy) and
             restless legs syndrome. Underlying causes can be physiological, such as hormonal imbalances or neurological
@@ -47,7 +68,8 @@
             Effective treatment varies depending on the specific disorder and may involve lifestyle changes, medication,
             or cognitive behavioral therapy.</p>
         <h3 id="impactOfSleep">The impact of sleep</h3>
-        <p class="articles">Sleep profoundly impacts nearly every aspect of human physiology and mental function. During sleep, the body
+        <p class="articles">Sleep profoundly impacts nearly every aspect of human physiology and mental function. During
+            sleep, the body
             repairs and regenerates tissues, strengthens the immune system, and releases hormones essential for growth
             and development. Cognitive functions, such as memory consolidation and learning, are significantly enhanced
             by adequate sleep. Furthermore, sleep plays a crucial role in emotional regulation, helping to process
@@ -56,7 +78,8 @@
             affects mood and mental health, potentially leading to depression and anxiety. Therefore, prioritizing
             sufficient, high-quality sleep is vital for maintaining overall physical and mental well-being.</p>
         <h2 id="sleepHygiene">Sleep hygiene</h2>
-        <p class="articles">Improving sleep hygiene involves establishing consistent sleep habits to promote better sleep quality and
+        <p class="articles">Improving sleep hygiene involves establishing consistent sleep habits to promote better
+            sleep quality and
             quantity. This includes maintaining a regular sleep schedule, going to bed and waking up around the same
             time each day, even on weekends, to regulate the body's natural sleep-wake cycle. Creating a relaxing
             bedtime routine that excludes screen time and caffeine consumption before bed is crucial. Optimizing your
