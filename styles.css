@@ -59,6 +59,8 @@ h1 {
 }
 p {
     color: #476f95;
+    margin-bottom: 2.5vh;
+    margin-top: 0;
 }
 header {
     background-color: #7593af;
@@ -91,4 +93,20 @@ header {
 .main{
   margin-left: 10vw;
   margin-right: 10vw;
+  /* padding: 0 2vw; */
+}
+/* .WhSsS{
+
+} */
+.main p{
+    font-size: 1.7vh;
+}
+h2{
+    font-size: 2vh;
+    padding: 1vh 0;
+    margin: 0;
+}
+.text{
+    background-color: aliceblue;
+    padding: 0 1vw;
 }
