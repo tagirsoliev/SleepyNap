@@ -14,28 +14,15 @@
 <body>
     <header>
         <div class="upperHeader">
-            <div class="leftHeader">
+            <div class="Logo">
                 <img src="/img/icons8-яркая-луна-96.png" alt="Лого" class="favic">
                 <h1>Sleepynap</h1>
             </div>
             <div class="withTable">
-                <button onclick="window.location.href='location'" class="btn">Sleepcal culator</button>
-                <button onclick="window.location.href='#whatIsSleep'" href="" class="btn">What is Sleep?</button>
-                <button onclick="window.location.href='#sleepDisorders'" class="btn">Aboutsleep disorders</button>
-                <button onclick="window.location.href='#impactOfSleep'" class="btn">Theimpact of sleep</button>
-                <button onclick="window.location.href='#sleepHygiene'" class="btn">Sleephygiene</button>
+                <button onclick="window.location.href='location'" class="menu">Сalculator</button>
+                <button onclick="window.location.href='#whatIsSleep'" href="" class="menu">Articles</button>
             </div>
         </div>
-        <div class="lastBtn"><button href="/articles.html" id="lastBtn">More detailed articles</button></div>
-        <!-- <div class="divWithPInHeader">
-            <p class="pInHeader">Your Sleep, Your Health, Our Expertise: Explore our extensive collection of articles on
-                sleep, covering
-                topics such as: the science of sleep, sleep disorders (insomnia, sleep apnea, etc.), the impact of sleep
-                on
-                your physical and mental health, and effective strategies for improving your sleep hygiene.<br><br> We
-                also offer a
-                powerful sleep calculator</p>
-        </div> -->
     </header>
     <div class="main">
         <div id="calculator">
@@ -51,6 +38,15 @@
             <div>
 
             </div>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><button onclick="window.location.href='location'" class="btn">Sleepcal culator</button></li>
+                <li><button onclick="window.location.href='#whatIsSleep'" href="" class="btn">What is Sleep?</button></li>
+                <li><button onclick="window.location.href='#sleepDisorders'" class="btn">Aboutsleep disorders</button></li>
+                <li><button onclick="window.location.href='#impactOfSleep'" class="btn">Theimpact of sleep</button></li>
+                <li><button onclick="window.location.href='#sleepHygiene'" class="btn">Sleephygiene</button></li>
+            </ul>
         </div>
         <div class="text">
             <h2 id="whatIsSleep">What is Sleep?</h2>
@@ -79,7 +75,7 @@
                 Effective treatment varies depending on the specific disorder and may involve lifestyle changes,
                 medication,
                 or cognitive behavioral therapy.</p>
-            <h3 id="impactOfSleep">The impact of sleep</h3>
+            <h2 id="impactOfSleep">The impact of sleep</h2>
             <p class="articles">Sleep profoundly impacts nearly every aspect of human physiology and mental function.
                 During
                 sleep, the body
