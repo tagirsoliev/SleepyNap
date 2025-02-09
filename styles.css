@@ -28,6 +28,7 @@ h1 {
 .favic {
     width: 5vw;
     height: 8vh;
+    margin-bottom: 0.5vh;
 }
 
 .menu {
@@ -66,22 +67,17 @@ header {
     margin: 0;
 }
 
-.lastBtn {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .main {
     margin-left: 10vw;
     margin-right: 10vw;
 }
 
 .main p {
-    font-size: 2.3vh;
+    font-size: 2.7vh;
 }
 
 h2 {
-    font-size: 2vh;
+    font-size: 3vh;
     padding: 1vh 0;
     margin: 0;
     color: #e6e6ef;
@@ -93,14 +89,14 @@ h2 {
 }
 
 .navigation {
-    height: 20vh;
+    height: auto;
     border: 0.5vh solid white;
     width: auto;
     display: flex;
     align-items: start;
     border-radius: 1vw;
     flex-direction: column;
-    width: 20vw;
+    width: max-content;
 }
 li{
     color: #e6e6ef;
@@ -112,4 +108,5 @@ li{
     color:#e6e6ef;
     cursor: pointer;
     width: auto;
+    font-size: 2.3vh;
 }
