@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
+body {
+    background-image: url(/img/2533760_8247\ 1\ \(2\).svg);
+    background-position: 62% 15%;
+    background-repeat: no-repeat;
+    background-color: #0D081E;
+}
+
+.menu {
+    display: flex;
+    margin: 6px 14px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger {
+    display: flex;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    margin: 0;
+}
+
+h1,
+p,
+a,
+h2 {
+    font-family: "Average Sans";
+    font-weight: 200;
+}
+
+.button {
+    width: 30vw;
+    height: 4vh;
+    background-color: #D9D9D9;
+    border-radius: 27px;
+    font-size: 2.4vmax;
+    color: #473A9B;
+    border: none;
+    font-family: "Average Sans";
+    font-weight: 400;
+}
+
+#calculator {
+    font-family: "Average Sans";
+    width: auto;
+    margin: 665px 16px 0 16px;
+    height: 410px;
+    background-color: #1E1E1E;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CalculatorH {
+    color: #473A9B;
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0;
+}
