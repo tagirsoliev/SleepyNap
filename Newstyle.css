@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
 body {
     background-image: url(/img/2533760_8247\ 1\ \(2\).svg);
-    background-position: 62% 15%;
+    background-position: 62% -14vh;
     background-repeat: no-repeat;
     background-color: #0D081E;
+    margin: 0
 }
 
 .menu {
@@ -47,18 +48,60 @@ h2 {
 #calculator {
     font-family: "Average Sans";
     width: auto;
-    margin: 665px 16px 0 16px;
+    padding: 0 18px ;
     height: 410px;
     background-color: #1E1E1E;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 665px 15px 0 15px;
+
 }
 
-.CalculatorH {
+.calculatorH {
     color: #473A9B;
     font-weight: 400;
     font-size: 32px;
     margin: 0;
+}
+.selectOfTime{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.btnSelect{
+    border: 1px solid black;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    width: 160px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    font-weight: 500;
+}
+.lines{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    height: 410px;
+    color: white;
+}
+.textCal{
+    font-size: 16px;
+}
+.tableCal{
+    display: flex;
+}
+.upperPartCal   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.getTime{
+    padding-left: 7px;
+}
+.inputTime{
+    height: 30px;
+    width: 90px;
+}
+.secondBtn{
+    width: 145px;
 }
