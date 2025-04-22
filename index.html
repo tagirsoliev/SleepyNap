@@ -8,9 +8,7 @@
     <title>Sleepynap</title>
     <link rel="icon" href="/img/icons8-яркая-луна-48.png" type="icon/x-icon">
     <link rel="stylesheet" href="/style.css">
-    <script>
-        "script.js"
-    </script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -27,47 +25,50 @@
                 <h2 class="calculatorH">Calculator</h2>
                 <section class="upperPartCal">
                     <div class="selectOfTime">
-                        <button class="btnSelect">By the time to wake up</button>
+                        <button class="btnSelect firstBtn active">By the time to wake up</button>
                         <button class="btnSelect secondBtn">On time to go bed</button>
                     </div>
                 </section>
                 <table class="tableCal">
                     <tr class="textCal">
                         <td>The time you want to wake up at</td>
-                        <td>
+                        <td colspan="2">
                             <form action="" method="get"><input type="time" name="getTime" id="inputTime"></form>
                         </td>
+                        <td><form class="form"><button type="submit" class="BTN">Send</button></form></td>
                     </tr>
                     <th colspan="2" class="resultCal">You need to go to bed at:</th>
-                    <tr class="textCal">
-                        <td class="inputFT"></td>
-                        <td class="inputTextF"></td>
-                    </tr>
-                    <tr class="textCal">
-                        <td class="inputST"></td>
-                        <td class="inputTextS"></td>
-                    </tr>
-                    <tr class="textCal">
-                        <td class="inputTT"></td>
-                        <td class="inputTextT"></td>
-                    </tr>
-                    <tr class="textCal">
-                        <td class="inputFoT"></td>
-                        <td class="inputTextFo"></td>
-                    </tr>
-                    <tr class="textCal">
-                        <td class="inputFiT"></td>
-                        <td class="inputTextFi"></td>
-                    </tr>
-                    <tr class="textCal">
-                        <td class="inputSixT"></td>
-                        <td class="inputTextSix"></td>
+                    <div class="result">
+                        <tr class="textCal">
+                            <td class="inputFT"></td>
+                            <td class="inputTextF"></td>
+                        </tr>
+                        <tr class="textCal">
+                            <td class="inputST"></td>
+                            <td class="inputTextS"></td>
+                        </tr>
+                        <tr class="textCal">
+                            <td class="inputTT"></td>
+                            <td class="inputTextT"></td>
+                        </tr>
+                        <tr class="textCal">
+                            <td class="inputFoT"></td>
+                            <td class="inputTextFo"></td>
+                        </tr>
+                        <tr class="textCal">
+                            <td class="inputFiT"></td>
+                            <td class="inputTextFi"></td>
+                        </tr>
+                        <tr class="textCal">
+                            <td class="inputSixT"></td>
+                            <td class="inputTextSix"></td>
+                    </div>
                     </tr>
                 </table>
             </section>
         </div>
         <form action="" class="textAfterCal">We recommend that you go to bed at <input type="text" name=""
-                class="outputSelect">xxx because that's the ideal number of hours to sleep.</form>
+                class="outputSelect"> because that's the ideal number of hours to sleep.</form>
         <div class="articles">
             <h4 class="jstAtricles">Articles</h4>
             <h2 class="nameOfParagraph">What is Sleep?</h2>

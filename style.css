@@ -26,7 +26,8 @@ h1 {
 h1,
 p,
 a,
-h2 {
+h2,
+.btn {
     font-family: "Average Sans";
     font-weight: 200;
 }
@@ -87,7 +88,7 @@ h2 {
 }
 
 .textCal {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .tableCal {
@@ -169,7 +170,7 @@ h2 {
 }
 
 .paragraphs {
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .footer {
@@ -185,6 +186,17 @@ h2 {
 .hrefs {
     color: white;
 }
+.BTN{
+    width: 90px;
+    height: 30px;
+    font-size: 24px;
+    margin: 0 5px;
+    font-family: "Average Sans";
+}
+.active{
+    background-color: #705CF5;
+}
+
 
 @media screen and (min-width: 1000px) {
     body {
@@ -278,6 +290,9 @@ h2 {
         width: 120px;
         font-size: 24px;
     }
+    .active{
+        background-color: #705CF5;
+    }
 }
 
 @media screen and (min-width: 1920px) {
@@ -361,5 +376,8 @@ h2 {
         height: 40px;
         width: 150px;
         font-size: 36px;
+    }
+    .active{
+        background-color: #705CF5;
     }
 }
