@@ -19,9 +19,5 @@ Our integrated sleep calculator allows you to determine your ideal sleep schedul
 
 ## Contact Us
 
-For any questions, suggestions, or feedback, please contact us at [your email address].
+For any questions, suggestions, or feedback, please contact us at.
 
-
-## Stay Updated
-
-Follow us on [social media links] for the latest sleep tips and updates!
