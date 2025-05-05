@@ -1,63 +1,77 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.addEventListener("")
-    let FirstBtn = document.getElementsByClassName("firstBtn")
-    let SecondBtn = document.getElementsByClassName("secondBtn")
-    let Btn = document.getElementsByClassName("BTN")
-    let OutputSelect = document.getElementsByClassName("outputSelect")
-
-    // console.log(Time)
-    // if (isNaN(value)) {
-    //     resultDiv.textContent = 'Пожалуйста, введите число'
-    //     return 
-    // }
-    // function FirstBtnActive() {
-    //     Btn.addEventListenet("click", function () {
-    //         let Time = document.getElementById("inputTime").value
-    //         let hoursAndMinutes = Time.split(":")
-    //         let hours = Number(hoursAndMinutes[0]) * 60
-    //         let minutes = Number(hoursAndMinutes[1])
-    //         Time = hours + minutes
-    //         result1 = Timetowakeup - 740
-    //         result2 = Timetowakeup - 7
-    //         result3 = Timetowakeup - 5
-    //         result4 = Timetowakeup - 6
-    //         result1 = Timetowakeup - 9
-    //         result5 = Timetowakeup - 8
-    //     })
-    // }
-    // function SecondBtnActive() {
-    //     let Time = document.getElementById("inputTime").value
-    //     let hoursAndMinutes = Time.split(":")
-    //     let hours = Number(hoursAndMinutes[0]) * 60
-    //     let minutes = Number(hoursAndMinutes[1])
-    //     Time = hours + minutes
-    //     result1 = Time + 740
-    //     result2 = Time + 7
-    //     result3 = Time + 5
-    //     result4 = Time + 6
-    //     result1 = Time + 9
-    //     result5 = Time + 8
-    // }
-    // FirstBtnActive()
-    FirstBtn.addEventListener("click", function () {
-        if (!this.classList.contains('active')) {
-            FirstBtn.classList.add('active');
-            SecondBtn.classList.remove('active')
-            FirstBtnActive()
+document.addEventListener('DOMContentLoaded', function() {
+    const calculateBtn = document.getElementById('calculateBtn');
+    const timeInput = document.getElementById('timeInput');
+    const resultsDiv = document.getElementById('results');
+    const timeOptionsDiv = document.getElementById('timeOptions');
+    const errorMessage = document.getElementById('errorMessage');
+    
+    calculateBtn.addEventListener('click', function() {
+        // Скрываем предыдущие сообщения об ошибках
+        errorMessage.style.display = 'none';
+        
+        // Проверяем, введено ли время
+        if (!timeInput.value) {
+            errorMessage.textContent = 'Пожалуйста, введите время';
+            errorMessage.style.display = 'block';
+            return;
         }
-    })
-    SecondBtn.addEventListener("click", function () {
-        if (!this.classList.contains('active')) {
-            FirstBtn.classList.remove('active');
-            SecondBtn.classList.add('active')
-            SecondBtnActive()
+        
+        const mode = document.querySelector('input[name="mode"]:checked').value;
+        const [hours, minutes] = timeInput.value.split(':').map(Number);
+        
+        // Создаем объект Date с текущей датой и выбранным временем
+        const inputDate = new Date();
+        inputDate.setHours(hours, minutes, 0, 0);
+        
+        const sleepCycles = [];
+        const cycleDuration = 90; // длительность цикла сна в минутах
+        const fallAsleepTime = 15; // время на засыпание в минутах
+        
+        if (mode === 'wakeup') {
+            // Рассчитываем время отбоя (от 1 до 6 циклов сна)
+            for (let cycles = 6; cycles >= 1; cycles--) {
+                const bedtime = new Date(inputDate);
+                bedtime.setMinutes(bedtime.getMinutes() - cycles * cycleDuration - fallAsleepTime);
+                
+                const isBestOption = cycles === 5 || cycles === 6;
+                sleepCycles.push({
+                    time: bedtime,
+                    cycles: cycles,
+                    isBest: isBestOption
+                });
+            }
+        } else {
+            // Рассчитываем время подъема (от 1 до 6 циклов сна)
+            for (let cycles = 1; cycles <= 6; cycles++) {
+                const wakeupTime = new Date(inputDate);
+                wakeupTime.setMinutes(wakeupTime.getMinutes() + cycles * cycleDuration + fallAsleepTime);
+                
+                const isBestOption = cycles === 5 || cycles === 6;
+                sleepCycles.push({
+                    time: wakeupTime,
+                    cycles: cycles,
+                    isBest: isBestOption
+                });
+            }
         }
-    })
-    // let result
-    // // if
-    // Btn.addEventListener("click", function () {
-    //     // if
-    // })
-})
-// Math.trunc(result / 60)
-// result % 60
+        
+        // Отображаем результаты
+        timeOptionsDiv.innerHTML = '';
+        
+        sleepCycles.forEach(option => {
+            const timeStr = option.time.toTimeString().substring(0, 5);
+            const optionDiv = document.createElement('div');
+            optionDiv.className = 'time-option' + (option.isBest ? ' best-option' : '');
+            
+            if (mode === 'wakeup') {
+                optionDiv.textContent = `Go Bad at ${timeStr} (${option.cycles} cycles, ${option.cycles * 1.5} hours of sleep)`;
+            } else {
+                optionDiv.textContent = `Wake up at ${timeStr} (${option.cycles} cycles, ${option.cycles * 1.5} hours of sleep)`;
+            }
+            
+            timeOptionsDiv.appendChild(optionDiv);
+        });
+        
+        resultsDiv.style.display = 'block';
+    });
+});

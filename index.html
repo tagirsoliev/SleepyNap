@@ -8,7 +8,7 @@
     <title>Sleepynap</title>
     <link rel="icon" href="/img/icons8-яркая-луна-48.png" type="icon/x-icon">
     <link rel="stylesheet" href="/style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -25,50 +25,32 @@
                 <h2 class="calculatorH">Calculator</h2>
                 <section class="upperPartCal">
                     <div class="selectOfTime">
-                        <button class="btnSelect firstBtn active">By the time to wake up</button>
-                        <button class="btnSelect secondBtn">On time to go bed</button>
+                        <label>
+                            <input type="radio" name="mode" value="wakeup" checked>
+                            Time to wake up
+                        </label>
+                        <label>
+                            <input type="radio" name="mode" value="bedtime">
+                            Time to go bad
+                        </label>
                     </div>
                 </section>
-                <table class="tableCal">
-                    <tr class="textCal">
-                        <td>The time you want to wake up at</td>
-                        <td colspan="2">
-                            <form action="" method="get"><input type="time" name="getTime" id="inputTime"></form>
-                        </td>
-                        <td><form class="form"><button type="submit" class="BTN">Send</button></form></td>
-                    </tr>
-                    <th colspan="2" class="resultCal">You need to go to bed at:</th>
-                    <div class="result">
-                        <tr class="textCal">
-                            <td class="inputFT"></td>
-                            <td class="inputTextF"></td>
-                        </tr>
-                        <tr class="textCal">
-                            <td class="inputST"></td>
-                            <td class="inputTextS"></td>
-                        </tr>
-                        <tr class="textCal">
-                            <td class="inputTT"></td>
-                            <td class="inputTextT"></td>
-                        </tr>
-                        <tr class="textCal">
-                            <td class="inputFoT"></td>
-                            <td class="inputTextFo"></td>
-                        </tr>
-                        <tr class="textCal">
-                            <td class="inputFiT"></td>
-                            <td class="inputTextFi"></td>
-                        </tr>
-                        <tr class="textCal">
-                            <td class="inputSixT"></td>
-                            <td class="inputTextSix"></td>
+                <div class="sendCalc">
+                    <p>The time you want to wake up at</p>
+                    <form action="" method="get" class="Forma">
+                        <input type="time" name="getTime" id="timeInput" required>
+                        <button type="button" class="BTN" id="calculateBtn">Send</button>
+                    </form>
+                </div>
+                <div class="bottomCalc">
+                    <div id="errorMessage" class="error" style="display: none;"></div>
+                    <div id="results" class="results" style="display: none;">
+                        <h3 class="recommends">recommendations:</h3>
+                        <div id="timeOptions"></div>
                     </div>
-                    </tr>
-                </table>
+                </div>
             </section>
         </div>
-        <form action="" class="textAfterCal">We recommend that you go to bed at <input type="text" name=""
-                class="outputSelect"> because that's the ideal number of hours to sleep.</form>
         <div class="articles">
             <h4 class="jstAtricles">Articles</h4>
             <h2 class="nameOfParagraph">What is Sleep?</h2>
@@ -80,7 +62,8 @@
                 distinct stages, each playing a vital role in restoring and rejuvenating the body and mind.
             </p>
             <h2 class="nameOfParagraph">About sleep disorders</h2>
-            <p class="paragraphs">Sleep disorders encompass a wide range of conditions that disrupt the quantity, quality,
+            <p class="paragraphs">Sleep disorders encompass a wide range of conditions that disrupt the quantity,
+                quality,
                 or
                 timing of sleep,
                 significantly impacting daytime functioning. These disorders can manifest in various ways, from
@@ -116,7 +99,8 @@
                 sufficient, high-quality sleep is vital for maintaining overall physical and mental well-being.
             </p>
             <h2 class="nameOfParagraph">Sleep hygiene</h2>
-            <p class="paragraphs">Improving sleep hygiene involves establishing consistent sleep habits to promote better
+            <p class="paragraphs">Improving sleep hygiene involves establishing consistent sleep habits to promote
+                better
                 sleep quality and
                 quantity. This includes maintaining a regular sleep schedule, going to bed and waking up around the same
                 time each day, even on weekends, to regulate the body's natural sleep-wake cycle. Creating a relaxing
@@ -133,8 +117,10 @@
         </div>
     </main>
     <footer class="footer ">
-        <a href="https://yandex.ru/maps/213/moscow/?add-review=true&ll=37.505034%2C55.844461&mode=poi&poi%5Bpoint%5D=37.500724%2C55.839737&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1030927206&tab=reviews&z=14.8" class="hrefs">Tips and sagestions</a>
-        <a href="https://yandex.ru/maps/213/moscow/?add-review=true&ll=37.505034%2C55.844461&mode=poi&poi%5Bpoint%5D=37.500724%2C55.839737&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1030927206&tab=reviews&z=14.8" class="hrefs">contacs</a>
+        <a href="https://yandex.ru/maps/213/moscow/?add-review=true&ll=37.505034%2C55.844461&mode=poi&poi%5Bpoint%5D=37.500724%2C55.839737&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1030927206&tab=reviews&z=14.8"
+            class="hrefs">Tips and sagestions</a>
+        <a href="https://yandex.ru/maps/213/moscow/?add-review=true&ll=37.505034%2C55.844461&mode=poi&poi%5Bpoint%5D=37.500724%2C55.839737&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1030927206&tab=reviews&z=14.8"
+            class="hrefs">contacs</a>
     </footer>
 </body>
 

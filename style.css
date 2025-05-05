@@ -27,9 +27,11 @@ h1,
 p,
 a,
 h2,
-.btn {
+.btn,
+label {
     font-family: "Average Sans";
     font-weight: 200;
+    margin: 0;
 }
 
 .button {
@@ -69,17 +71,6 @@ h2,
     width: 100%;
 }
 
-.btnSelect {
-    border: 1px solid black;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    width: auto;
-    height: 35px;
-    font-size: 16px;
-    padding: 0;
-    font-weight: 400;
-}
-
 .lines {
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -115,7 +106,7 @@ h2,
     width: 145px;
 }
 
-#inputTime {
+#timeInput {
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
@@ -123,7 +114,7 @@ h2,
     vertical-align: middle;
     text-align: center;
     font-size: 20px;
-    width: 90px;
+    width: 95px;
     height: 30px;
 }
 
@@ -159,6 +150,15 @@ h2,
     margin: 5px 32px 0 32px;
 }
 
+label {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    transform: scale(2);
+}
+
 .nameOfParagraph {
     color: #705CF5;
     margin: 20px 0;
@@ -186,17 +186,59 @@ h2,
 .hrefs {
     color: white;
 }
-.BTN{
+
+.BTN {
     width: 90px;
     height: 30px;
     font-size: 24px;
     margin: 0 5px;
     font-family: "Average Sans";
+    vertical-align: middle;
 }
-.active{
+
+.active {
     background-color: #705CF5;
 }
 
+.sendCalc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    border-top: 1px solid black;
+}
+.Forma{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.previewResult {
+    font-size: 16px;
+}
+
+.bottomCalc {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.recommends {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 32px;
+}
+
+#timeOptions {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.best-option {
+    color: green;
+}
 
 @media screen and (min-width: 1000px) {
     body {
@@ -207,6 +249,14 @@ h2,
     .menu {
         margin: 0px 10%;
         width: 80%;
+    }
+    .sendCalc {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 20px;
+    }
+    .Forma{
+        flex-direction: row;
     }
 
     h1 {
@@ -229,13 +279,6 @@ h2,
 
     .calculatorH {
         font-size: 64px;
-    }
-
-    .btnSelect {
-        background-color: #FFFFFF;
-        width: 250px;
-        height: 35px;
-        font-size: 24px;
     }
 
     .lines {
@@ -290,8 +333,18 @@ h2,
         width: 120px;
         font-size: 24px;
     }
-    .active{
+
+    .active {
         background-color: #705CF5;
+    }
+
+    #timeOptions {
+        font-size: 24px;
+        height: 150px;
+        margin-top: 10px;
+    }
+    .recommends{
+        margin-top: 10px;
     }
 }
 
@@ -320,13 +373,6 @@ h2,
 
     .calculatorH {
         font-size: 96px;
-    }
-
-    .btnSelect {
-        background-color: #FFFFFF;
-        width: 400px;
-        height: 60px;
-        font-size: 36px;
     }
 
     .lines {
@@ -372,12 +418,34 @@ h2,
         font-size: 32px;
     }
 
-    #inputTime {
-        height: 40px;
+    #timeInput {
+        height: 60px;
         width: 150px;
         font-size: 36px;
     }
-    .active{
+
+    .active {
         background-color: #705CF5;
+    }
+
+    #timeOptions {
+        font-size: 32px;
+        height: 150px;
+    }
+    .sendCalc{
+        font-size: 36px;
+    }
+    label{
+        font-size: 36px;
+    }
+    .recommends{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+    .BTN{
+        font-size: 32px;
+        width: 150px;
+        height: 60px;
     }
 }
